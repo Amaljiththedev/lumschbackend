@@ -1,9 +1,8 @@
-export default ({ env }) => ({
-
-    // Users Permissions Plugin Configuration
-
-      config: {
-        jwtSecret: env('JWT_SECRET', '+tzGL61SzkKOcHT1QO3Uew=='),  // JWT Secret for authentication
-
+export default ({ env }: { env: (key: string) => string }) => ({
+  'users-permissions': {
+    config: {
+      jwtSecret: 'fFJmbjiC+0ecKgvKHx0+bg==',
     },
-  });
+  },
+});
+
