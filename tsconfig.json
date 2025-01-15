@@ -12,32 +12,22 @@
     "resolveJsonModule": true,
     "noEmitOnError": true,
     "noImplicitThis": true,
-    "outDir": "dist",
-    "rootDir": "."
+    "outDir": "dist",        // Output compiled JavaScript files to the 'dist' folder
+    "rootDir": "src"         // Keep all source TypeScript files in the 'src' folder
   },
   "include": [
-    // Include root files
-    "./",
-    // Include all ts files
-    "./**/*.ts",
-    // Include all js files
-    "./**/*.js",
-    // Force the JSON files in the src folder to be included
-    "src/**/*.json"
+    "src/**/*.ts",           // Only include .ts files from the 'src' directory
+    "src/**/*.js",           // Include .js files if you are using them for any reason
+    "src/**/*.json"          // Include .json files in 'src' if necessary
   ],
-
   "exclude": [
-    "node_modules/",
-    "build/",
-    "dist/",
-    ".cache/",
-    ".tmp/",
-
-    // Do not include admin files in the server compilation
-    "src/admin/",
-    // Do not include test files
-    "**/*.test.*",
-    // Do not include plugins in the server compilation
-    "src/plugins/**"
+    "node_modules/",         // Exclude node_modules directory
+    "build/",                // Exclude build directory if exists
+    "dist/",                 // Exclude the dist directory (compiled files)
+    ".cache/",               // Exclude any caching directories
+    ".tmp/",                 // Exclude temp directories
+    "src/admin/",            // Exclude admin files from being compiled (if using Strapi)
+    "**/*.test.*",           // Exclude test files
+    "src/plugins/**"         // Exclude plugins from compilation (if using Strapi)
   ]
 }
