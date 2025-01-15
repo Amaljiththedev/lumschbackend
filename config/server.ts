@@ -1,7 +1,5 @@
-module.exports = {
-  host: '0.0.0.0',
-  port: 1337,
-  keys: [
-    '717d344ed0be6e7cad297212b2bfd26e218a0a4e32d584927da7dc88ce7f6b73ffdd451b45b324d15d371795e7e68d3ae81da35de602def3f8851bc442c75ffc',
-  ],
-};
+module.exports = ({ env }) => ({
+  host: env('HOST', '0.0.0.0'),
+  port: env.int('PORT', 1337),
+  keys: ['b369e09c9d5c6272bea8cc79ebcb490945bcc1000eac4a7eed61b9a79ce87f56d13d72fc2415537e7fc211a565200bd49e9b53e1b7c7460395727b033a4455ac'],
+});
