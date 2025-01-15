@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "time_line_data2s",
+  "info": {
+    "singularName": "time-line-data2",
+    "pluralName": "time-line-data2s",
+    "displayName": "TimeLineData2"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "list1": {
+      "type": "text"
+    },
+    "list2": {
+      "type": "text"
+    },
+    "list3": {
+      "type": "text"
+    },
+    "subheading": {
+      "type": "text"
+    },
+    "videosrc": {
+      "type": "string"
+    }
+  }
+}

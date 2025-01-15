@@ -1,0 +1,18 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tracing_beam_video3s",
+  "info": {
+    "singularName": "tracing-beam-video3",
+    "pluralName": "tracing-beam-video3s",
+    "displayName": "TracingBeamVideo3"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "videosrc": {
+      "type": "string"
+    }
+  }
+}

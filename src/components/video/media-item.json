@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_video_media_items",
+  "info": {
+    "displayName": "MediaItem"
+  },
+  "options": {},
+  "attributes": {
+    "video": {
+      "type": "enumeration",
+      "enum": [
+        "video"
+      ]
+    }
+  }
+}

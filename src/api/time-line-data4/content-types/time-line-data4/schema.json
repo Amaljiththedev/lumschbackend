@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "time_line_data4s",
+  "info": {
+    "singularName": "time-line-data4",
+    "pluralName": "time-line-data4s",
+    "displayName": "TimeLineData4"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "subheading": {
+      "type": "text"
+    },
+    "list1": {
+      "type": "text"
+    },
+    "list2": {
+      "type": "string"
+    },
+    "list3": {
+      "type": "text"
+    },
+    "videosrc": {
+      "type": "string"
+    }
+  }
+}

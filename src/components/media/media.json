@@ -1,0 +1,12 @@
+{
+  "collectionName": "components_media_media",
+  "info": {
+    "displayName": "Media"
+  },
+  "options": {},
+  "attributes": {
+    "Media": {
+      "type": "string"
+    }
+  }
+}

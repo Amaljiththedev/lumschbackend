@@ -1,0 +1,12 @@
+{
+  "collectionName": "components_timeline_components_content_items",
+  "info": {
+    "displayName": "contentItem"
+  },
+  "options": {},
+  "attributes": {
+    "Text": {
+      "type": "string"
+    }
+  }
+}

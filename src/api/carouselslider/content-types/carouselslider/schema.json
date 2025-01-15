@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "carouselsliding",
+  "info": {
+    "singularName": "carouselslider",
+    "pluralName": "carouselsliding",
+    "displayName": "carouselSlides",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "videoSrc": {
+      "type": "string"
+    },
+    "thumbnail": {
+      "type": "string"
+    }
+  }
+}

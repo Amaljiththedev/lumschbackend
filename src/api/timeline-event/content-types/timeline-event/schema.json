@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "timeline_events",
+  "info": {
+    "singularName": "timeline-event",
+    "pluralName": "timeline-events",
+    "displayName": "TimelineEvent"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Content": {
+      "type": "dynamiczone",
+      "components": [
+        "text.text",
+        "media.media"
+      ]
+    }
+  }
+}
