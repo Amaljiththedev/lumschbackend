@@ -1,9 +1,8 @@
 {
   "compilerOptions": {
-    "module": "CommonJS",
+    "module": "CommonJS",                     // Ensure you're using CommonJS for modules
     "moduleResolution": "Node",
-    "lib": ["ES2020"],
-    "target": "ES2019",
+    "target": "ES2019",                       // Adjust as needed
     "strict": false,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
@@ -12,22 +11,23 @@
     "resolveJsonModule": true,
     "noEmitOnError": true,
     "noImplicitThis": true,
-    "outDir": "dist",        // Output compiled JavaScript files to the 'dist' folder
-    "rootDir": "src"         // Keep all source TypeScript files in the 'src' folder
+    "outDir": "dist",
+    "rootDir": "src",
+    "types": ["node"]                        // Add this line to include Node.js types
   },
   "include": [
-    "src/**/*.ts",           // Only include .ts files from the 'src' directory
-    "src/**/*.js",           // Include .js files if you are using them for any reason
-    "src/**/*.json"          // Include .json files in 'src' if necessary
+    "src/**/*.ts",
+    "src/**/*.js",
+    "src/**/*.json"
   ],
   "exclude": [
-    "node_modules/",         // Exclude node_modules directory
-    "build/",                // Exclude build directory if exists
-    "dist/",                 // Exclude the dist directory (compiled files)
-    ".cache/",               // Exclude any caching directories
-    ".tmp/",                 // Exclude temp directories
-    "src/admin/",            // Exclude admin files from being compiled (if using Strapi)
-    "**/*.test.*",           // Exclude test files
-    "src/plugins/**"         // Exclude plugins from compilation (if using Strapi)
+    "node_modules/",
+    "build/",
+    "dist/",
+    ".cache/",
+    ".tmp/",
+    "src/admin/",
+    "**/*.test.*",
+    "src/plugins/**"
   ]
 }
