@@ -9,6 +9,7 @@ module.exports = [
       origin: [
         'http://localhost:3000', // Local development (Next.js default)
         'https://www.luminarylines.school', // Production frontend domain
+        'https://luminarylines.com', // Production frontend domain
       ],
       methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH'],
       headers: ['Content-Type', 'Authorization', 'Origin', 'Accept', 'X-Requested-With'],

@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "agencyclientcarousels",
+  "info": {
+    "singularName": "agencyclientcarousel",
+    "pluralName": "agencyclientcarousels",
+    "displayName": "agencyclientcarousels"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Name": {
+      "type": "string",
+      "required": true
+    },
+    "profileUrl": {
+      "type": "text",
+      "required": true
+    },
+    "Avatar": {
+      "type": "text"
+    },
+    "description": {
+      "type": "text"
+    }
+  }
+}

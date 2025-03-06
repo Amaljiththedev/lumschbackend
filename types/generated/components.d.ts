@@ -66,6 +66,20 @@ export interface VideoVideo extends Struct.ComponentSchema {
   };
 }
 
+export interface WholeAgencyclientcarousel extends Struct.ComponentSchema {
+  collectionName: 'components_whole_agencyclientcarousels';
+  info: {
+    description: '';
+    displayName: 'agencyclientcarousel';
+  };
+  attributes: {
+    avatar: Schema.Attribute.String;
+    description: Schema.Attribute.Text;
+    name: Schema.Attribute.String;
+    url: Schema.Attribute.Text;
+  };
+}
+
 export interface WholeContentItem extends Struct.ComponentSchema {
   collectionName: 'components_whole_content_items';
   info: {
@@ -84,6 +98,7 @@ declare module '@strapi/strapi' {
       'video.media': VideoMedia;
       'video.media-item': VideoMediaItem;
       'video.video': VideoVideo;
+      'whole.agencyclientcarousel': WholeAgencyclientcarousel;
       'whole.content-item': WholeContentItem;
     }
   }

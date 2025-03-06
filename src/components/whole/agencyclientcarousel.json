@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_whole_agencyclientcarousels",
+  "info": {
+    "displayName": "agencyclientcarousel",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "url": {
+      "type": "text"
+    },
+    "avatar": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    }
+  }
+}

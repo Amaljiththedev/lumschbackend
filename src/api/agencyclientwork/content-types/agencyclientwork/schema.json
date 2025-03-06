@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "agencyclientworks",
+  "info": {
+    "singularName": "agencyclientwork",
+    "pluralName": "agencyclientworks",
+    "displayName": "agencyclientwork"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "subtitle": {
+      "type": "string"
+    },
+    "videoUrl": {
+      "type": "string"
+    },
+    "avatarUrl": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    }
+  }
+}

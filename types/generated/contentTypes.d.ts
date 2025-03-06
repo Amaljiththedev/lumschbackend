@@ -369,6 +369,71 @@ export interface AdminUser extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiAgencyclientcarouselAgencyclientcarousel
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'agencyclientcarousels';
+  info: {
+    displayName: 'agencyclientcarousels';
+    pluralName: 'agencyclientcarousels';
+    singularName: 'agencyclientcarousel';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Avatar: Schema.Attribute.Text;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    description: Schema.Attribute.Text;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::agencyclientcarousel.agencyclientcarousel'
+    > &
+      Schema.Attribute.Private;
+    Name: Schema.Attribute.String & Schema.Attribute.Required;
+    profileUrl: Schema.Attribute.Text & Schema.Attribute.Required;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiAgencyclientworkAgencyclientwork
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'agencyclientworks';
+  info: {
+    displayName: 'agencyclientwork';
+    pluralName: 'agencyclientworks';
+    singularName: 'agencyclientwork';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    avatarUrl: Schema.Attribute.String;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::agencyclientwork.agencyclientwork'
+    > &
+      Schema.Attribute.Private;
+    name: Schema.Attribute.String;
+    publishedAt: Schema.Attribute.DateTime;
+    subtitle: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    videoUrl: Schema.Attribute.String;
+  };
+}
+
 export interface ApiCarouselsliderCarouselslider
   extends Struct.CollectionTypeSchema {
   collectionName: 'carouselsliding';
@@ -398,6 +463,41 @@ export interface ApiCarouselsliderCarouselslider
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     videoSrc: Schema.Attribute.String;
+  };
+}
+
+export interface ApiClienttestimonalClienttestimonal
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'clienttestimonals';
+  info: {
+    description: '';
+    displayName: 'clienttestimonals';
+    pluralName: 'clienttestimonals';
+    singularName: 'clienttestimonal';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Avatar: Schema.Attribute.String;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    Followers: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::clienttestimonal.clienttestimonal'
+    > &
+      Schema.Attribute.Private;
+    Name: Schema.Attribute.String;
+    publishedAt: Schema.Attribute.DateTime;
+    Stats: Schema.Attribute.String;
+    Text: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    videoUrl: Schema.Attribute.String;
   };
 }
 
@@ -1283,7 +1383,10 @@ declare module '@strapi/strapi' {
       'admin::transfer-token': AdminTransferToken;
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;
+      'api::agencyclientcarousel.agencyclientcarousel': ApiAgencyclientcarouselAgencyclientcarousel;
+      'api::agencyclientwork.agencyclientwork': ApiAgencyclientworkAgencyclientwork;
       'api::carouselslider.carouselslider': ApiCarouselsliderCarouselslider;
+      'api::clienttestimonal.clienttestimonal': ApiClienttestimonalClienttestimonal;
       'api::faq.faq': ApiFaqFaq;
       'api::hero.hero': ApiHeroHero;
       'api::post.post': ApiPostPost;
