@@ -61,5 +61,11 @@ module.exports = [
   },
   'strapi::session',
   'strapi::favicon',
-  'strapi::public',
+  {
+    name: 'strapi::public',
+    config: {
+      path: '/uploads',
+      maxAge: 31536000, // Cache for 1 year
+    },
+  },
 ];
