@@ -10,6 +10,7 @@ module.exports = [
         'http://localhost:3000',
         'https://www.luminarylines.school',
         'https://luminarylines.com',
+        'https://www.luminarylines.com', // Add this line
       ],
       methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH'],
       headers: ['Content-Type', 'Authorization', 'Origin', 'Accept', 'X-Requested-With'],
@@ -18,7 +19,6 @@ module.exports = [
   },
   'strapi::poweredBy',
   'strapi::query',
-  // Configure the body parser for large files (replace 'strapi::body' with this):
   {
     name: 'strapi::body',
     config: {
