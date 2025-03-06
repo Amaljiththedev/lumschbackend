@@ -1,7 +1,32 @@
 module.exports = [
   'strapi::logger',
   'strapi::errors',
-  'strapi::security',
+  {
+    name: 'strapi::security',
+    config: {
+      contentSecurityPolicy: {
+        useDefaults: true,
+        directives: {
+          'default-src': ["'self'", 'https:'],
+          'media-src': [
+            "'self'",
+            'data:',
+            'blob:',
+            'https://luminarylinesadmin.in',
+            'https://www.luminarylines.school',
+            'https://luminarylines.com',
+            'https://www.luminarylines.com',
+          ],
+          'connect-src': [
+            "'self'",
+            'https:',
+            'http://localhost:1337',
+            'https://luminarylinesadmin.in',
+          ],
+        },
+      },
+    },
+  },
   {
     name: 'strapi::cors',
     config: {
@@ -10,10 +35,17 @@ module.exports = [
         'http://localhost:3000',
         'https://www.luminarylines.school',
         'https://luminarylines.com',
-        'https://www.luminarylines.com', // Add this line
+        'https://www.luminarylines.com',
+        'https://luminarylinesadmin.in',
       ],
       methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH'],
-      headers: ['Content-Type', 'Authorization', 'Origin', 'Accept', 'X-Requested-With'],
+      headers: [
+        'Content-Type',
+        'Authorization',
+        'Origin',
+        'Accept',
+        'X-Requested-With',
+      ],
       credentials: true,
     },
   },
