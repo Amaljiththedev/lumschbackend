@@ -7,18 +7,26 @@ module.exports = [
     config: {
       enabled: true,
       origin: [
-        'http://localhost:3000', // Local development (Next.js default)
-        'https://www.luminarylines.school', // Production frontend domain
-        'https://luminarylines.com', // Production frontend domain
+        'http://localhost:3000',
+        'https://www.luminarylines.school',
+        'https://luminarylines.com',
       ],
       methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH'],
       headers: ['Content-Type', 'Authorization', 'Origin', 'Accept', 'X-Requested-With'],
-      credentials: true, // If you're using cookies or credentials with requests
+      credentials: true,
     },
   },
   'strapi::poweredBy',
   'strapi::query',
-  'strapi::body',
+  // Configure the body parser for large files (replace 'strapi::body' with this):
+  {
+    name: 'strapi::body',
+    config: {
+      formidable: {
+        maxFileSize: 1000 * 1024 * 1024, // 1GB (adjust as needed)
+      },
+    },
+  },
   'strapi::session',
   'strapi::favicon',
   'strapi::public',
